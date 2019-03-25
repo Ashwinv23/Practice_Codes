@@ -40,6 +40,7 @@ while counter < 10
     hard_array << questions[counter]['marks']
     hard_hash = Hash[*hard_array.flatten]
   end
+
   counter += 1
 end
 
