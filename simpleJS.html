@@ -11,12 +11,24 @@
         document.getElementById("test").innerHTML = `${val} multipled by 5 is ${val * 5}`;
       }
     }
+
+    function myPrompt() {
+      const nameInput = prompt("Please enter your name");
+      if (nameInput.length == 0) {
+        alert("Name cannot be blank!");
+      } else {
+        document.getElementById("name").innerHTML = "Hello " + nameInput + ", Welcome to this page";
+      }
+    }
     </script>
 
     <body>
     <button onclick="alert('This works!!');">Alert check</button>
     <input type="number" id="inp"> <button onclick="mathInput();">Multiply * 5</button>
     <p id="test"></p>
+
+    <button onclick="myPrompt();">Click Me</button>
+    <p id="name" style="color: blue;"></p>
     </body>
   </head>
 </html>
