@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Hello there</title>
+
+    <script>
+    function mathInput() {
+      const val = document.getElementById("inp").value;
+      if (val.length == 0) {
+        document.getElementById("test").innerHTML = "Hey! you need to enter a number";
+      } else {
+        document.getElementById("test").innerHTML = `${val} multipled by 5 is ${val * 5}`;
+      }
+    }
+    </script>
+
+    <body>
+    <button onclick="alert('This works!!');">Alert check</button>
+    <input type="number" id="inp"> <button onclick="mathInput();">Multiply * 5</button>
+    <p id="test"></p>
+    </body>
+  </head>
+</html>
