@@ -20,15 +20,34 @@
         document.getElementById("name").innerHTML = "Hello " + nameInput + ", Welcome to this page";
       }
     }
+
+    function myBlur() {
+      const enteredValue = document.getElementById("input1").value;
+      if (enteredValue == '') {
+        document.getElementById("message1").innerHTML = "You need to enter a value";
+      } else if (enteredValue.length < 4) {
+        document.getElementById("message1").innerHTML = "A bit too short!";
+      } else {
+        document.getElementById("message1").innerHTML = "Perfect :)";
+      }
+    }
     </script>
 
     <body>
+    <h4>Enter a number to multiply</h4>
     <button onclick="alert('This works!!');">Alert check</button>
     <input type="number" id="inp"> <button onclick="mathInput();">Multiply * 5</button>
     <p id="test"></p>
 
+    <h4>Click below to get user prompt</h4>
     <button onclick="myPrompt();">Click Me</button>
     <p id="name" style="color: blue;"></p>
+
+    <h4>Enter text to test onBlur</h4>
+    Enter your name
+    <input type="text" id="input1" onblur="myBlur();"> <span id="message1"></span> <br>
+    Enter your age
+    <input type="number" id="input2" onblur="myBlur();"> <span id="message2"></span>
     </body>
   </head>
 </html>
