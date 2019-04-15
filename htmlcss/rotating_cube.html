@@ -14,107 +14,103 @@
     <script src="jsloaders/three.min.js"></script>
     <script>
 
-window.addEventListener('load', init)
-let scene
-let camera
-let renderer
-let sceneObjects = []
-let uniforms = {}
+      window.addEventListener('load', init)
+      let scene
+      let camera
+      let renderer
+      let sceneObjects = []
+      let uniforms = {}
 
-function init() {
-  scene = new THREE.Scene()
+      function init() {
+        scene = new THREE.Scene()
 
-  camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
-  camera.position.z = 5
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
+        camera.position.z = 5
 
-  renderer = new THREE.WebGLRenderer()
-  renderer.setSize(window.innerWidth, window.innerHeight)
+        renderer = new THREE.WebGLRenderer()
+        renderer.setSize(window.innerWidth, window.innerHeight)
+        document.body.appendChild(renderer.domElement)
 
-  document.body.appendChild(renderer.domElement)
-  adjustLighting()
-  addBasicCube()
-  addExperimentalCube()
-  animationLoop()
-}
-
-function adjustLighting() {
-    let pointLight = new THREE.PointLight(0xdddddd)
-    //pointLight.position.set(-5, -3, 3)
-    pointLight.position.set(0, 0, 0)
-    scene.add(pointLight)
-
-    let ambientLight = new THREE.AmbientLight(0x505050)
-    scene.add(ambientLight)
-}
-
-function addBasicCube() {
-  let geometry = new THREE.BoxGeometry(1, 1, 1)
-  let material = new THREE.MeshLambertMaterial()
-
-  let mesh = new THREE.Mesh(geometry, material)
-  mesh.position.x = -3
-  scene.add(mesh)
-  sceneObjects.push(mesh)
-}
-
-function vertexShader() {
-  return `
-    varying vec3 vUv;
-    varying vec4 modelViewPosition;
-    varying vec3 vecNormal;
-
-    void main() {
-      vUv = position;
-      vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);
-      vecNormal = (modelViewMatrix * vec4(normal, 0.0)).xyz; //????????
-      gl_Position = projectionMatrix * modelViewPosition;
-    }
-  `
-}
-
-function fragmentShader() {
-  return `
-      uniform vec3 colorA;
-      uniform vec3 colorB;
-      varying vec3 vUv;
-
-      void main() {
-        gl_FragColor = vec4(mix(colorA, colorB, vUv.z), 1.0);
+        adjustLighting()
+        addBasicCube()
+        addExperimentalCube()
+        animationLoop()
       }
-  `
-}
 
-function addExperimentalCube() {
-  uniforms.colorA = {type: 'vec3', value: new THREE.Color(0x74ebd5)}
-  uniforms.colorB = {type: 'vec3', value: new THREE.Color(0xACB6E5)}
+      function adjustLighting() {
+          let pointLight = new THREE.PointLight(0xdddddd)
+          pointLight.position.set(-10, -10, 10)
+          // pointLight.position.set(0, 0, 0)
+          scene.add(pointLight)
 
-  let geometry = new THREE.BoxGeometry(1, 1, 1)
-  let material =  new THREE.ShaderMaterial({
-    uniforms: uniforms,
-    fragmentShader: fragmentShader(),
-    vertexShader: vertexShader(),
-  })
+          let ambientLight = new THREE.AmbientLight(0x303030)
+          scene.add(ambientLight)
+      }
 
-  let mesh = new THREE.Mesh(geometry, material)
-  mesh.position.x = 3
-  scene.add(mesh)
-  sceneObjects.push(mesh)
-}
+      function addBasicCube() {
+        let geometry = new THREE.BoxGeometry(1, 1, 1)
+        let material = new THREE.MeshLambertMaterial()
 
+        let mesh = new THREE.Mesh(geometry, material)
+        mesh.position.x = -3
+        scene.add(mesh)
+        sceneObjects.push(mesh)
+      }
 
-function animationLoop() {
-  renderer.render(scene, camera)
+      function vertexShader() {
+        return `
+          varying vec3 vUv;
+          varying vec4 modelViewPosition;
+          varying vec3 vecNormal;
 
-  for(let object of sceneObjects) {
-    object.rotation.x += 0.01
-    object.rotation.y += 0.01
-  }
+          void main() {
+            vUv = position;
+            vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);
+            vecNormal = (modelViewMatrix * vec4(normal, 0.0)).xyz; //????????
+            gl_Position = projectionMatrix * modelViewPosition;
+          }
+        `
+      }
 
-  requestAnimationFrame(animationLoop)
-}
+      function fragmentShader() {
+        return `
+            uniform vec3 colorA;
+            uniform vec3 colorB;
+            varying vec3 vUv;
 
+            void main() {
+              gl_FragColor = vec4(mix(colorA, colorB, vUv.y + vUv.z), 1.0);
+            }
+        `
+      }
 
-</script>
+      function addExperimentalCube() {
+        uniforms.colorA = {type: 'vec3', value: new THREE.Color(0xff0000)}
+        uniforms.colorB = {type: 'vec3', value: new THREE.Color(0x00ff00)}
+
+        let geometry = new THREE.BoxGeometry(1, 1, 1)
+        let material =  new THREE.ShaderMaterial({
+          uniforms: uniforms,
+          fragmentShader: fragmentShader(),
+          vertexShader: vertexShader(),
+        })
+
+        let mesh = new THREE.Mesh(geometry, material)
+        mesh.position.x = 3
+        scene.add(mesh)
+        sceneObjects.push(mesh)
+      }
+
+      function animationLoop() {
+        renderer.render(scene, camera)
+
+        for(let object of sceneObjects) {
+          object.rotation.x += 0.01
+          object.rotation.y += 0.01
+        }
+        requestAnimationFrame(animationLoop)
+      }
+    </script>
   </body>
 </html>
 
