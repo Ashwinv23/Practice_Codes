@@ -15,6 +15,13 @@ var stomachObj;
 var stomachAngle = Math.PI / 2;
 var target = Math.PI / 2;
 var isRotating = false;
+let pointLight = new THREE.PointLight(0xdddddd)
+    pointLight.position.set(-5, -3, 3)
+    scene.add(pointLight)
+
+    let ambientLight = new THREE.AmbientLight(0x505050)
+    scene.add(ambientLight)
+
 // var directionalLight = new THREE.DirectionalLight( 0xFFFFFF, 1.5 );
 // directionalLight.position.set( 10, 20, 50 );
 // // directionalLight.target(0, 30, 0);
@@ -24,11 +31,11 @@ var isRotating = false;
 // // directionalLight1.target(0, 30, 0);
 // scene.add( directionalLight1 );
 
-const color = 0xFFFFFF;
-  const intensity = 1;
-  const light = new THREE.DirectionalLight(color, intensity);
-  light.position.set(3, 8, 4);
-  scene.add(light);
+// const color = 0xFFFFFF;
+//   const intensity = 1;
+//   const light = new THREE.DirectionalLight(color, intensity);
+//   light.position.set(3, 8, 4);
+//   scene.add(light);
 
 loader.load('model.obj', function (obj) {
   stomachObj = obj;
