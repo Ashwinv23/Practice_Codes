@@ -18,6 +18,13 @@ h1 {
   margin-bottom: 0;
 }
 
+@media (max-width: 460px) {
+  h1 {
+    font-size: 3.4rem;
+    line-height: 1.2;
+  }
+}
+
 a {
   color: #477ca7;
 }
@@ -47,17 +54,29 @@ li {
   background-color: #EEEEEE;
 }
 
+@media (max-width: 460px) {
+  #main {
+    margin: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
 #img-div {
   background-color: white;
   padding: 10px;
   margin: 0px;
 }
 
-#img {
-  width: 100%;
-  display: block;
-  height: auto;
-  margin: 0 auto;
+@media (max-width: 460px) {
+  #img-caption {
+    font-size: 1.4rem;
+  }
 }
 
 #tribute-info p {
