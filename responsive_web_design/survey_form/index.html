@@ -8,7 +8,7 @@
   <body>
     <h1 id="title">Survey Form</h1>
     <div id="survey-outer">
-      <p>Let us know how we can improve freeCodeCamp</p>
+      <p id="description">Let us know how we can improve freeCodeCamp</p>
         <form id="survey-form" method="POST">
           <div class="rowtabs">
             <div class="left-tab"><label for="name" id="name-label">*Name:</label></div>
@@ -20,14 +20,14 @@
           </div>
           <div class="rowtabs">
             <div class="left-tab"><label for="number" id="number-label">*Age:</label></div>
-            <div class="right-tab"><input type="number" class="input-field" id="number" placeholder="Age" required></div>
+            <div class="right-tab"><input type="number" class="input-field" id="number" min="1" max="125" placeholder="Age" required></div>
           </div>
           <div class="rowtabs">
             <div class="left-tab">
               <label for="dropdown">Which option best describes your current role?</label>
             </div>
             <div class="right-tab">
-              <select name="dropdown" class="dropdown">
+              <select name="dropdown" id="dropdown" class="dropdown">
                 <option value="student">Student</option>
                 <option value="fulltimejob">Full Time Job</option>
                 <option value="fulltimelearner">Full Time Learner</option>
@@ -54,7 +54,7 @@
               <label for="dropdown">What do you like most in FCC:</label>
             </div>
             <div class="right-tab">
-              <select class="dropdown">
+              <select class="dropdown" id="dropdown">
                 <option value="student">Challenges</option>
                 <option value="fulltimejob">Projects</option>
                 <option value="fulltimelearner">Community</option>
