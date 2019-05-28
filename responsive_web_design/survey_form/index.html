@@ -12,22 +12,22 @@
         <form id="survey-form" method="POST">
           <div class="rowtabs">
             <div class="left-tab"><label for="name" id="name-label">*Name:</label></div>
-            <div class="right-tab"><input autofocus type="text" id="name" placeholder="Enter your name" required></div>
+            <div class="right-tab"><input autofocus type="text" class="input-field" id="name" placeholder="Enter your name" required></div>
           </div>
           <div class="rowtabs">
             <div class="left-tab"><label for="email" id="email-label">*Email:</label></div>
-            <div class="right-tab"><input type="email" id="email" placeholder="Enter your email" required></div>
+            <div class="right-tab"><input type="email" class="input-field" id="email" placeholder="Enter your email"  required></div>
           </div>
           <div class="rowtabs">
             <div class="left-tab"><label for="number" id="number-label">*Age:</label></div>
-            <div class="right-tab"><input type="number" id="number" placeholder="Age" required></div>
+            <div class="right-tab"><input type="number" class="input-field" id="number" placeholder="Age" required></div>
           </div>
           <div class="rowtabs">
             <div class="left-tab">
               <label for="dropdown">Which option best describes your current role?</label>
             </div>
             <div class="right-tab">
-              <select>
+              <select name="dropdown" class="dropdown">
                 <option value="student">Student</option>
                 <option value="fulltimejob">Full Time Job</option>
                 <option value="fulltimelearner">Full Time Learner</option>
@@ -40,7 +40,7 @@
             <div class="left-tab">
               <label>*How likely is that you would recommend freeCodeCamp to a friend?</label>
             </div>
-            <div class="right-tab">
+            <div class="right-tab radio">
               <input id="one" type="radio" name="items" value="one">
               <label for="one">Definitely</label><br>
               <input id="two" type="radio" name="items" value="two">
@@ -54,7 +54,7 @@
               <label for="dropdown">What do you like most in FCC:</label>
             </div>
             <div class="right-tab">
-              <select>
+              <select class="dropdown">
                 <option value="student">Challenges</option>
                 <option value="fulltimejob">Projects</option>
                 <option value="fulltimelearner">Community</option>
@@ -66,7 +66,7 @@
             <div class="left-tab">
               <label>Things that should be improved in the future(Check all that apply):</label>
             </div>
-            <div class="right-tab">
+            <div class="right-tab checkbox">
               <input id="one" type="checkbox" name="items" value="one">
               <label for="one">Front-end Projects</label><br>
               <input id="two" type="checkbox" name="items" value="two">
@@ -83,8 +83,7 @@
               <textarea id="comments" name="story" rows="5" cols="40"> Enter your comments here...</textarea>
             </div>
           </div>
-          <button id="submit" type="submit">Submit</button>
-
+          <button id="submit" class="btn" type="submit">Submit</button>
         </form>
     </div>
   </body>

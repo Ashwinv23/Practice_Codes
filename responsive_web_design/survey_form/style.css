@@ -1,23 +1,30 @@
 html body {
   background-color: #a9d7d1;
   text-align: center;
-  font-family: 'Raleway', Helvetica, sans-seriff;
+}
+
+label {
+  line-height: 30px;
+}
+
+p {
+  font-size: 18px;
 }
 
 #title {
   margin: 20px;
   font-size: 2rem;
-
 }
+
 #survey-outer {
   background-color: white;
   width: 70%;
   padding: 20px 10px 10px 10px;
   border-radius: 5px;
+  margin: 0 auto;
 }
 
 .rowtabs {
-  /*display: flex;*/
   padding: 10px;
   clear: both;
 }
@@ -25,9 +32,8 @@ html body {
 .left-tab {
   display: inline-block;
   text-align: right;
-  width: 40%;
+  width: 45%;
   vertical-align: top;
-
 }
 
 .right-tab {
@@ -35,9 +41,27 @@ html body {
   text-align: left;
   width: 45%;
   padding-left: 20px;
+  vertical-align: middle;
 }
 
-label {
-  font-size: 1.1rem;
-  /*padding-top: 0;*/
+.input-field {
+  height: 30px;
+  width: 270px;
+  padding: 5px;
+  margin: 1px;
+}
+
+.dropdown {
+  height: 35px;
+  width: 150px;
+  border-radius: 2px;
+  margin: 2px;
+}
+
+.btn {
+  background-color: #ceceec;
+  height: 35px;
+  width: 100px;
+  font-size: 14px;
+  margin-top: 10px;
 }
