@@ -114,3 +114,10 @@ p {
   background-color: orange;
   font-size: 14px;
 }
+
+.pricing {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
