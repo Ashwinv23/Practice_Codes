@@ -23,6 +23,11 @@ nav {
   font-size: 20px;
 }
 
+nav > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+
 header {
   display: flex;
   justify-content: space-between;
