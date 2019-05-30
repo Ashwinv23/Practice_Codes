@@ -1,5 +1,6 @@
 body {
   background-color: rgb(240, 240, 240);
+  margin-bottom: 0;
 }
 
 /* To get the navbar menu aligned, you can use below li or nav > ul */
@@ -27,12 +28,43 @@ header {
   justify-content: space-between;
 }
 
-input {
+footer {
+  background-color: grey;
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer > ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  text-decoration: none;
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+
+footer > ul > li {
+  font-size: 16px;
+  padding: 5px 15px 5px 0;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer > span {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 15px;
+  opacity: 0.7;
+  padding-right: 10px;
+}
+/*input {
   width: 100%;
   height: 100%;
   margin: 5px 0;
   margin-top: -4px;
-}
+}*/
 
 section > .explanation > h2 {
   margin-bottom: 0;
@@ -42,6 +74,7 @@ section > .explanation > h2 {
 section > .explanation > p {
   margin-top: 0;
   font-size: 16px;
+  text-align: left;
 }
 
 h3 {
@@ -66,6 +99,10 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#middle > input {
+  width: 40px;
 }
 
 #middle > h2 {
