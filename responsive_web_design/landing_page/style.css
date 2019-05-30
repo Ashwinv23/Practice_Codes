@@ -34,17 +34,30 @@ input {
   margin-top: -4px;
 }
 
+section > .explanation > h2 {
+  margin-bottom: 0;
+  font-size: 25px;
+}
+
+section > .explanation > p {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h3 {
+  padding: 10px 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
 #features {
   display: flex;
   width: 90vw;
   margin-top: 50px;
-}
-
-.center {
-  width: 600px;
-  margin: 0 auto;
-  display: block;
-  margin-top: 80px;
 }
 
 #middle {
@@ -57,6 +70,13 @@ input {
 
 #middle > h2 {
   word-wrap: break-word;
+}
+
+.center {
+  width: 600px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 80px;
 }
 
 .btn {
@@ -74,15 +94,23 @@ input {
   padding: 10px;
 }
 
-section > .explanation > h2 {
-  margin-bottom: 0;
-  font-size: 25px;
+.pricing-cards {
+  width: 300px;
+  height: 330px;
+  border: 1px solid black;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-section > .explanation > p {
-  margin-top: 0;
-  font-size: 16px;
+.subheading {
+  text-align: center;
+  background-color: grey;
 }
 
-
-
+.select-btn {
+  height: 35px;
+  width: 90px;
+  margin-top: 20px;
+  background-color: orange;
+  font-size: 14px;
+}
