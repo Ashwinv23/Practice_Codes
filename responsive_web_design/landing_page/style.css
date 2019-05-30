@@ -2,10 +2,23 @@ body {
   background-color: lightgrey;
 }
 
-li {
+/* To get the navbar menu aligned, you can use below li or nav > ul */
+/*li {
   list-style: none;
   display: inline-block;
   padding: 0 30px;
+  font-size: 20px;
+}*/
+
+nav > ul {
+  display: flex;
+  flex-direction: row;
+  width: 35vw;
+  justify-content: space-around;
+  list-style: none
+}
+
+nav {
   font-size: 20px;
 }
 
@@ -15,23 +28,33 @@ header {
 }
 
 input {
-  width: 250px;
-  height: 23px;
+  width: 100%;
+  height: 100%;
   margin: 5px 0;
+  margin-top: -4px;
 }
 
 #logo {
   width: 300px;
-  padding-top: 10px;
+  padding-top: 17px;
 }
 
 #middle {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#middle > h2 {
+  word-wrap: break-word;
 }
 
 .btn {
-  width: 110px;
+  width: 115px;
   height: 30px;
+  margin-top: 10px;
   background-color: orange;
 }
 
