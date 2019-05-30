@@ -40,6 +40,13 @@ input {
   margin-top: 50px;
 }
 
+.center {
+  width: 600px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 80px;
+}
+
 #middle {
   text-align: center;
   display: flex;
@@ -70,10 +77,12 @@ input {
 section > .explanation > h2 {
   margin-bottom: 0;
   font-size: 25px;
-  /*margin-top: 10px;*/
 }
 
 section > .explanation > p {
   margin-top: 0;
   font-size: 16px;
 }
+
+
+
