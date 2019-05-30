@@ -1,5 +1,5 @@
 body {
-  background-color: lightgrey;
+  background-color: rgb(240, 240, 240);
 }
 
 /* To get the navbar menu aligned, you can use below li or nav > ul */
@@ -34,9 +34,10 @@ input {
   margin-top: -4px;
 }
 
-#logo {
-  width: 300px;
-  padding-top: 17px;
+#features {
+  display: flex;
+  width: 90vw;
+  margin-top: 50px;
 }
 
 #middle {
@@ -58,3 +59,21 @@ input {
   background-color: orange;
 }
 
+.images {
+  display: flex;
+  flex-direction: column;
+  width: 23vw;
+  text-align: center;
+  padding: 10px;
+}
+
+section > .explanation > h2 {
+  margin-bottom: 0;
+  font-size: 25px;
+  /*margin-top: 10px;*/
+}
+
+section > .explanation > p {
+  margin-top: 0;
+  font-size: 16px;
+}

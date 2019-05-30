@@ -2,11 +2,12 @@
   <head>
     <title>FCC: Product Landing Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <header id="header">
       <div id="logo">
-        <img src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" alt="Trombones logo" id="header-img" style="width: 300px;">
+        <img src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" alt="Trombones logo" id="header-img" style="width: 300px; padding-top: 17px;">
       </div>
       <nav id="nav-bar">
         <ul>
@@ -19,11 +20,37 @@
     <main>
       <section id="middle">
         <h2>Handcrafted, home-made masterpieces</h2>
-        <form id="form" action="">
-          <input name="email" id="email" type="text" placeholder="Enter your email address"><br>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <input name="email" id="email" type="email" placeholder="Enter your email address"><br>
           <input id="submit" type="button" class="btn" value="GET STARTED">
         </form>
       </section>
+
+      <div class="container">
+        <section id="features">
+          <div class="images">
+            <i class="fa fa-fire" style="font-size:48px;color:orange;padding:10px 0 40px 0;"></i>
+            <i class="fa fa-truck" style="font-size:48px;color:orange;padding-bottom:40px;"></i>
+            <i class="fa fa-battery-full" style="font-size:48px;color:orange"></i>
+          </div>
+          <div class="explanation">
+            <h2>Premium Materials</h2>
+            <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+
+            <h2 style="margin-top: 35px;">Fast Shipping</h2>
+            <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+
+            <h2 style="margin-top: 28px;">Quality Assurance</h2>
+            <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+          </div>
+        </section>
+        <section id="howitworks">
+
+        </section>
+        <section id="pricing">
+
+        </section>
+      </div>
     </main>
   </body>
 </html>
