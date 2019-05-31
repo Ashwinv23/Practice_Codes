@@ -177,3 +177,13 @@ p {
   justify-content: space-between;
   margin: 0 auto;
 }
+
+/* media queries */
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+  #nav-bar {
+    font-size: 12px;
+  }
+}
