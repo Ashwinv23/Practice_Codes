@@ -8,19 +8,11 @@
       <header><h2>JS Documentation</h2></header>
       <div class="navmenu">
         <ul>
-          <li><a href="" class="nav-link">Introduction</a></li>
-          <li><a href="" class="nav-link">Variables</a></li>
-          <li><a href="" class="nav-link">Declaring variables</a></li>
-          <li><a href="" class="nav-link">Variable scope</a></li>
-          <li><a href="" class="nav-link">Global variables</a></li>
-          <li><a href="" class="nav-link">Constants</a></li>
-          <li><a href="" class="nav-link">Data types</a></li>
-          <li><a href="" class="nav-link">if...else statement</a></li>
-          <li><a href="" class="nav-link">while statement</a></li>
-          <li><a href="" class="nav-link">Function declarations</a></li>
-          <li><a href="" class="nav-link">Reference</a></li>
-          <li><a href="" class="nav-link">Variables</a></li>
-          <li class="lastli"><a href="">Variables</a></li>
+          <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+          <li><a href="#Variables" class="nav-link">Variables</a></li>
+          <li><a href="#Declaring_variables" class="nav-link">Declaring variables</a></li>
+          <li><a href="#Function_declarations" class="nav-link">Function declarations</a></li>
+          <li class="lastli"><a href="#Global_variables" class="nav-link">Global variables</a></li>
         </ul>
       </div>
     </nav>
@@ -49,22 +41,42 @@
         <p>You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.</p>
       </section>
 
-      <section class="main-section" id="">
-        <header></header>
-        <p><code></code></p>
-        <p></p>
+      <section class="main-section" id="Declaring_variables">
+        <header><h2>Declaring variables</h2></header>
+        <p>You can declare a variable in three ways. With the keyword var. For example,
+          <pre><code>var x = 42.</code></pre>
+        </p>
+        <p>This syntax can be used to declare both local and global variables. By simply assigning it a value. For example,
+          <pre><code>x = 42.</code></pre>
+        </p>
+        <p>This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant. With the keyword let. For example,
+        <pre><code>let y = 13.</code></pre>
+        This syntax can be used to declare a block scope local variable.
+        </p>
       </section>
 
-      <section class="main-section" id="">
-        <header></header>
-        <p><code></code></p>
-        <p></p>
+      <section class="main-section" id="Function_declarations">
+        <header><h2>Function declarations</h2></header>
+          <p>You can declare a variable in three ways. With the keyword var. For example,
+          <pre><code>var x = 42.</code></pre>
+        </p>
+        <p>This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant. With the keyword let. For example,
+        <pre><code>let y = 13.</code></pre>
+        This syntax can be used to declare a block scope local variable.
+        </p>
+        <p>A function definition (also called a function declaration, or function statement)  consists of the function keyword, followed by
+        <ul>
+          <li>The name of the function.</li><br>
+          <li>A list of arguments to the function, enclosed in parentheses and separated by commas.</li><br>
+          <li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+        </ul>
+        </p>
       </section>
 
-      <section class="main-section" id="">
-        <header></header>
-        <p><code></code></p>
-        <p></p>
+      <section class="main-section" id="Global_variables">
+        <header><h2>Global variables</h2></header>
+        <p>Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.</p>
+        <p>Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.</p>
       </section>
 
     </main>
